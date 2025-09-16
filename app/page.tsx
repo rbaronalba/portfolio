@@ -1,103 +1,121 @@
-import Image from "next/image";
+// app/page.tsx
+import ThemeToggle from "@/components/ThemeToggle";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const year = new Date().getFullYear();
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <>
+      <a className="skip-link" href="#proyectos">Saltar al contenido</a>
+
+      <nav>
+        <div className="nav-inner">
+          <div className="brand">
+            <div className="logo" aria-hidden="true" />
+            <p className="site-title" aria-label="Rubén Barona">Rubén Barona</p>
+          </div>
+          <div className="nav-right">
+            <a className="btn" href="#inicio">Inicio</a>
+            <a className="btn" href="#sobre-mi">Sobre mí</a>
+            <a className="btn" href="#proyectos">Proyectos</a>
+            <a className="btn" href="#contacto">Contacto</a>
+            <ThemeToggle />
+          </div>
         </div>
+      </nav>
+
+      {/* HERO */}
+      <header className="hero" id="inicio">
+        <section className="hero-inner">
+          <h1 className="hero-title">Hola, soy Rubén Barona</h1>
+          <p className="hero-desc">
+            Transformo el dato en conocimiento útil para la toma de decisiones en el fútbol profesional. 
+            Experiencia en análisis, visualización e implementación de soluciones digitales 
+            para entornos de scouting y dirección deportiva.
+          </p>
+          <div className="hero-cta">
+            <a className="btn btn-lg" href="#proyectos">Ver proyectos</a>
+            <a className="btn btn-ghost btn-lg" href="/cv/CV_RubénBaronaAlba.pdf" download>Descargar CV</a>
+          </div>
+        </section>
+      </header>
+
+      <main className="container">
+        <section id="sobre-mi" style={{ marginTop: 36 }}>
+          <div className="about-grid">
+            <div>
+              <h3 className="section-title">Sobre mí</h3>
+              <article style={{ padding: 20 }}>
+                <p>
+                  Ingeniero informático especializado en desarrollo de software y análisis de datos, orientado a crear soluciones digitales eficientes y sostenibles.
+                  He finalizado el Máster en Big Data aplicado al Scouting en Fútbol, donde apliqué análisis, visualización y machine learning para apoyar la toma de decisiones deportivas basada en datos.
+                  Creo en el aprendizaje continuo, la calidad técnica y la entrega de valor. 
+                  Mi objetivo es seguir creciendo como ingeniero de software en proyectos que integren desarrollo, datos y tecnología aplicada.
+                </p>
+              </article>
+            </div>
+            <div>
+              <h3 className="section-title">Tecnologías</h3>
+                <div className="chips">
+                  <span className="chip"><img src="/img/html.svg" alt="HTML" className="stack-icon" />HTML</span>
+                  <span className="chip"><img src="/img/css.svg" alt="CSS" className="stack-icon" />CSS</span>
+                  <span className="chip"><img src="/img/js.svg" alt="Javascript" className="stack-icon" />JavaScript</span>
+                  <span className="chip"><img src="/img/csharp.svg" alt="C#" className="stack-icon" />C#</span>
+                  <span className="chip"><img src="/img/python.svg" alt="Python" className="stack-icon" />Python</span>
+                  <span className="chip"><img src="/img/angular.svg" alt="Angular" className="stack-icon" />Angular</span>
+                  <span className="chip"><img src="/img/r.svg" alt="R" className="stack-icon" />R</span>
+                  <span className="chip"><img src="/img/sqlserver.svg" alt="SQL Server" className="stack-icon" />SQL Server</span>
+                  <span className="chip"><img src="/img/postgresql.svg" alt="PostgreSQL" className="stack-icon" />PostgreSQL</span>
+                  <span className="chip"><img src="/img/influxdb.svg" alt="InfluxDB" className="stack-icon" />InfluxDB</span>
+                  <span className="chip"><img src="/img/grafana.svg" alt="Grafana" className="stack-icon" />Grafana</span>
+                  <span className="chip"><img src="/img/powerbi.png" alt="Power BI" className="stack-icon" />Power BI</span>
+                  <span className="chip"><img src="/img/tableau.svg" alt="Tableau" className="stack-icon" />Tableau</span>
+                  <span className="chip"><img src="/img/wyscout.jpeg" alt="Wyscout" className="stack-icon" />Wyscout</span>
+                  <span className="chip"><img src="/img/nacsport.jpeg" alt="Nacsport" className="stack-icon" />Nacsport</span>
+                  <span className="chip"><img src="/img/winccoa.png" alt="Win CC OA" className="stack-icon" />Win CC OA</span>
+                  <span className="chip"><img src="/img/git.svg" alt="GitHub" className="stack-icon" />GitHub</span>
+                  <span className="chip"><img src="/img/vscode.svg" alt="Visual Studio Code" className="stack-icon" />Visual Studio Code</span>
+                </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section id="proyectos">
+          <h3 className="section-title">Proyectos</h3>
+          <p className="muted" style={{ margin: "8px 0 18px" }}>
+            Selección de trabajos representativos. Cada tarjeta enlaza a repositorios, demos o PDFs.
+          </p>
+
+          <div className="projects-list">
+            <article className="project-card card">
+              <div className="project-media" role="img" aria-label="Sistema de scouting inteligente" />
+              <div className="project-content">
+                <h4>Sistema de Scouting Inteligente · RC Celta</h4>
+                <p className="muted">Evaluación de fichajes según encaje táctico. Pipeline con selección de KPIs, PCA/UMAP, clustering y similitud (coseno).</p>
+                <div className="chips">
+                  <span className="chip">Boruta</span>
+                  <span className="chip">PCA/UMAP</span>
+                  <span className="chip">Cosine Similarity</span>
+                  <span className="chip">Streamlit</span>
+                </div>
+              </div>
+            </article>
+            {/* Resto de cards igual */}
+          </div>
+        </section>
+
+        {/* CONTACTO */}
+        <section style={{ marginTop: 36 }}>
+          <h3 className="section-title">¿Te interesa hablar?</h3>
+          <ContactForm />
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer>
+        © <span>{year}</span> Rubén Barona Alba | Software Engineer at ICCA | Football Data Analyst - Sports Tech & Big
       </footer>
-    </div>
+    </>
   );
 }
