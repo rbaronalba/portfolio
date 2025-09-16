@@ -12,7 +12,7 @@ export default function Home() {
       <nav>
         <div className="nav-inner">
           <div className="brand">
-            <div className="logo" aria-hidden="true" />
+            <img src="/img/selfie.jpeg" alt="Selfie" className="avatar" />
             <p className="site-title" aria-label="Rubén Barona">Rubén Barona</p>
           </div>
           <div className="nav-right">
