@@ -102,7 +102,148 @@ export default function Home() {
                 </div>
               </div>
             </article>
-            {/* Resto de cards igual */}
+
+            <article className="project-card card">
+              <div className="project-media" role="img" aria-label="Simulación de Montecarlo: Manchester City vs Chelsea" />
+              <div className="project-content">
+                <h4>Simulación de Montecarlo: Manchester City vs Chelsea</h4>
+                <p className="muted">Pipeline reproducible: lectura de datos, simulación de 1.000 partidos y análisis de resultado/xPoints.</p>
+                <div className="chips">
+                  <span className="chip">R</span>
+                  <span className="chip">dplyrP</span>
+                  <span className="chip">ggplot2</span>
+                  <span className="chip">stats</span>
+                </div>
+              </div>
+            </article>
+
+            <article className="project-card card">
+              <div className="project-media" role="img" aria-label="EDA y PCA para defensas de LaLiga"></div>
+              <div className="project-content">
+                <h4>EDA y PCA para defensa de LaLiga</h4>
+                <p>Selección de métricas, normalización y comparacion de perfiles en base a los componentes principales.</p>
+                <div className="chips">
+                  <span className="chip">R</span>
+                  <span className="chip">EDA</span>
+                  <span className="chip">PCA</span>
+                </div>
+              </div>
+            </article>
+
+            <article className="project-card card">
+              <div className="project-media" role="img" aria-label="Clusterización de defensas LaLiga (K-Means)" />
+              <div className="project-content">
+                <h4>Clusterización de defensas (LaLiga) con K-Means</h4>
+                <p className="muted">
+                  EDA, normalización Min-Max, método del codo y K-Means con visualización de clústeres.
+                </p>
+                <div className="chips">
+                  <span className="chip">R</span>
+                  <span className="chip">caret</span>
+                  <span className="chip">factoextra</span>
+                  <span className="chip">kmeans</span>
+                </div>
+              </div>
+            </article>
+
+            <article className="project-card card">
+              <div className="project-media" role="img" aria-label="Clusterización de jugadores con K-Means y PCA (Python)" />
+              <div className="project-content">
+                <h4>Clusterización de jugadores con K-Means</h4>
+                <p className="muted">
+                  Limpieza y transformación de datos, elección del clúster óptimo y aplicación de K-Means con múltiples inicializaciones y visualización de clústeres en PCA.
+                </p>
+                <div className="chips">
+                  <span className="chip">Python</span>
+                  <span className="chip">pandas</span>
+                  <span className="chip">scikit-learn</span>
+                  <span className="chip">KMeans</span>
+                  <span className="chip">PCA</span>
+                  <span className="chip">StandardScaler</span>
+                  <span className="chip">matplotlib</span>
+                  <span className="chip">seaborn</span>
+                </div>
+              </div>
+            </article>
+
+            <article className="project-card card">
+              <div className="project-media" role="img" aria-label="Rendimiento de jugadores del Sevilla FC" />
+              <div className="project-content">
+                <h4>Rendimiento de jugadores del Sevilla FC</h4>
+                <p className="muted">
+                  Cuadro de mandos que compara los mediocentros defensivos y delanteros centro en sus distintas fases del juego en Power BI.
+                </p>
+                <div className="chips">
+                  <span className="chip">Power BI</span>
+                  <span className="chip">Python</span>
+                  <span className="chip">SQL Server</span>
+                </div>
+              </div>
+            </article>
+
+            <article className="project-card card">
+              <div className="project-media" role="img" aria-label="Desempeño de los centrales de LaLiga" />
+              <div className="project-content">
+                <h4>Desempeño de los centrales de LaLiga</h4>
+                <p className="muted">
+                  Cuadro de mandos que compara la salida de balón de los centrales de LaLiga en Tableau.
+                </p>
+                <div className="chips">
+                  <span className="chip">Tableau</span>
+                  <span className="chip">Python</span>
+                  <span className="chip">SQL Server</span>
+                </div>
+              </div>
+            </article>
+
+            <article className="project-card card">
+              <div className="project-media" role="img" aria-label="Informe de Joaquín Panichelli" />
+              <div className="project-content">
+                <h4>Informe de Joaquín Panichelli</h4>
+                <p className="muted">
+                  Informe individual de Joaquín Panichelli, delantero del CD Mirandés.
+                </p>
+                <div className="chips">
+                  <span className="chip">Power Point</span>
+                  <span className="chip">Python</span>
+                  <span className="chip">SQL Server</span>
+                </div>
+              </div>
+            </article>
+
+            <article className="project-card card">
+              <div className="project-media" role="img" aria-label="Análisis de los delanteros de 1ª RFEF 2024/2025" />
+              <div className="project-content">
+                <h4>Análisis de los delanteros de 1ª RFEF 2024/2025</h4>
+                <p className="muted">
+                  Comparación del rendimiento ofensivo del top 20 delanteros de la categoría.
+                </p>
+                <div className="chips">
+                  <span className="chip">Power Point</span>
+                  <span className="chip">Python</span>
+                  <span className="chip">SQL Server</span>
+                </div>
+              </div>
+            </article>
+
+            <article className="project-card card">
+              <div className="project-media" role="img" aria-label="FBRef LaLiga 20/21: EDA + 3D Scatter + Radar"/>
+              <div className="project-content">
+                <h4>FBRef LaLiga 20/21: EDA + 3D y Radar</h4>
+                <p className="muted">
+                  Notebook en Python: carga de CSV, EDA, scatter 3D de jugadores del Barcelona y radar Messi–Benzema.
+                </p>
+                <div className="chips">
+                  <span className="chip">Python</span>
+                  <span className="chip">pandas</span>
+                  <span className="chip">matplotlib</span>
+                  <span className="chip">soccerplots</span>
+                </div>
+              </div>
+            </article>
+
+
+
           </div>
         </section>
 
