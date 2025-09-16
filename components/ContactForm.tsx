@@ -1,4 +1,3 @@
-// components/ContactForm.tsx
 "use client";
 import { useState } from "react";
 
@@ -14,7 +13,7 @@ export default function ContactForm() {
     const fd = new FormData(e.currentTarget);
     // honeypot
     if (fd.get("company")) {
-      setStatus("✔️ Enviado (modo honeypot).");
+      setStatus("Enviado.");
       setLoading(false);
       return;
     }
@@ -29,8 +28,8 @@ export default function ContactForm() {
       headers: { "Content-Type": "application/json" },
     });
 
-    if (res.ok) setStatus("✅ Mensaje enviado. ¡Gracias!");
-    else setStatus("❌ No se pudo enviar. Intenta de nuevo.");
+    if (res.ok) setStatus("Mensaje enviado.");
+    else setStatus("No se pudo enviar. Intentélo de nuevo.");
     setLoading(false);
     (e.target as HTMLFormElement).reset();
   }
