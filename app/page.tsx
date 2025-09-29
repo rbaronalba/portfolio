@@ -1,6 +1,7 @@
 // app/page.tsx
 import ThemeToggle from "@/components/ThemeToggle";
 import ContactForm from "@/components/ContactForm";
+import Image from "next/image";
 
 export default function Home() {
   const year = new Date().getFullYear();
@@ -89,22 +90,40 @@ export default function Home() {
           </p>
 
           <div className="projects-list">
-            <article className="project-card card">
-              <div className="project-media" role="img" aria-label="Sistema de scouting inteligente" />
-              <div className="project-content">
-                <h4>Sistema de Scouting Inteligente · RC Celta</h4>
-                <p className="muted">Evaluación de fichajes según encaje táctico. Pipeline con selección de KPIs, PCA/UMAP, clustering y similitud (coseno).</p>
-                <div className="chips">
-                  <span className="chip">Boruta</span>
-                  <span className="chip">PCA/UMAP</span>
-                  <span className="chip">Cosine Similarity</span>
-                  <span className="chip">Streamlit</span>
+            <a href="https://www.linkedin.com/posts/ruben-barona-alba_tras-varios-meses-de-trabajo-y-aprendizaje-activity-7375892886506176512-oCZD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC-FBn4Bd72dnalFmFmiNqFtBFVKYWeY_XM" target="_blank" rel="noopener noreferrer" className="card-link">         
+              <article className="project-card card">
+                <div className="project-media" role="img" aria-label="Sistema de scouting inteligente">
+                  <Image
+                    src="/img/projects/tfm.png"
+                    alt="Vista previa del sistema de scouting"
+                    fill                 // <= ocupa todo el contenedor
+                    priority={false}
+                    sizes="(max-width: 980px) 100vw, 220px"
+                    className="media-img"
+                  />
                 </div>
-              </div>
-            </article>
+                <div className="project-content">
+                  <h4>Sistema de scouting inteligente para el RC Celta: evaluación de fichajes según el perfil táctico</h4>
+                  <p className="muted">Diseño y desarrollo de una herramienta automatizada y escalable que evalúa el grado de adecuación táctica de jugadores externos al Real Club Celta de Vigo según su modelo de juego, 
+                    a partir de un análisis exhaustivo de datos de rendimiento del club y de la aplicación de técnicas avanzadas de Machine Learning</p>
+                  <div className="chips">
+                    <span className="chip">Python</span>
+                  </div>
+                </div>
+              </article>
+            </a>
 
             <article className="project-card card">
-              <div className="project-media" role="img" aria-label="Simulación de Montecarlo: Manchester City vs Chelsea" />
+              <div className="project-media" role="img" aria-label="Simulación de Montecarlo: Manchester City vs Chelsea">
+                <Image
+                  src="/img/projects/Montecarlo.png"
+                  alt="Vista previa de la simulación de Montecarlo"
+                  fill                 // <= ocupa todo el contenedor
+                  priority={false}
+                  sizes="(max-width: 980px) 100vw, 220px"
+                  className="media-img"
+                />
+              </div>
               <div className="project-content">
                 <h4>Simulación de Montecarlo: Manchester City vs Chelsea</h4>
                 <p className="muted">Pipeline reproducible: lectura de datos, simulación de 1.000 partidos y análisis de resultado/xPoints.</p>
@@ -118,7 +137,16 @@ export default function Home() {
             </article>
 
             <article className="project-card card">
-              <div className="project-media" role="img" aria-label="EDA y PCA para defensas de LaLiga"></div>
+              <div className="project-media" role="img" aria-label="EDA y PCA para defensas de LaLiga">
+                <Image
+                  src="/img/projects/"
+                  alt="Vista previa del gráfico"
+                  fill             
+                  priority={false}
+                  sizes="(max-width: 980px) 100vw, 220px"
+                  className="media-img"
+                />
+              </div>
               <div className="project-content">
                 <h4>EDA y PCA para defensa de LaLiga</h4>
                 <p>Selección de métricas, normalización y comparacion de perfiles en base a los componentes principales.</p>
@@ -131,7 +159,16 @@ export default function Home() {
             </article>
 
             <article className="project-card card">
-              <div className="project-media" role="img" aria-label="Clusterización de defensas LaLiga (K-Means)" />
+              <div className="project-media" role="img" aria-label="Clusterización de defensas de LaLiga (K-Means)">
+                <Image
+                  src="/img/projects/"
+                  alt="Vista previa del gráfico"
+                  fill                 
+                  priority={false}
+                  sizes="(max-width: 980px) 100vw, 220px"
+                  className="media-img"
+                />
+              </div>
               <div className="project-content">
                 <h4>Clusterización de defensas (LaLiga) con K-Means</h4>
                 <p className="muted">
@@ -147,7 +184,16 @@ export default function Home() {
             </article>
 
             <article className="project-card card">
-              <div className="project-media" role="img" aria-label="Clusterización de jugadores con K-Means y PCA (Python)" />
+              <div className="project-media" role="img" aria-label="Clusterización de jugadores con K-Means y PCA (Python)">
+                <Image
+                  src="/img/projects/"
+                  alt="Vista previa del gráfico"
+                  fill                 
+                  priority={false}
+                  sizes="(max-width: 980px) 100vw, 220px"
+                  className="media-img"
+                />
+              </div>              
               <div className="project-content">
                 <h4>Clusterización de jugadores con K-Means</h4>
                 <p className="muted">
@@ -167,7 +213,16 @@ export default function Home() {
             </article>
 
             <article className="project-card card">
-              <div className="project-media" role="img" aria-label="Rendimiento de jugadores del Sevilla FC" />
+              <div className="project-media" role="img" aria-label="Rendimiento de jugadores del Sevilla FC">
+                <Image
+                  src="/img/projects/"
+                  alt="Vista previa del tablero"
+                  fill                 
+                  priority={false}
+                  sizes="(max-width: 980px) 100vw, 220px"
+                  className="media-img"
+                />
+              </div>
               <div className="project-content">
                 <h4>Rendimiento de jugadores del Sevilla FC</h4>
                 <p className="muted">
@@ -182,7 +237,16 @@ export default function Home() {
             </article>
 
             <article className="project-card card">
-              <div className="project-media" role="img" aria-label="Desempeño de los centrales de LaLiga" />
+              <div className="project-media" role="img" aria-label="Desempeño de los centrales de LaLiga">
+                <Image
+                  src="/img/projects/"
+                  alt="Vista previa del informe"
+                  fill                 
+                  priority={false}
+                  sizes="(max-width: 980px) 100vw, 220px"
+                  className="media-img"
+                />
+              </div>
               <div className="project-content">
                 <h4>Desempeño de los centrales de LaLiga</h4>
                 <p className="muted">
@@ -197,7 +261,16 @@ export default function Home() {
             </article>
 
             <article className="project-card card">
-              <div className="project-media" role="img" aria-label="Informe de Joaquín Panichelli" />
+              <div className="project-media" role="img" aria-label="Informe de Joaquín Panichelli">
+                <Image
+                  src="/img/projects/"
+                  alt="Vista previa del informe"
+                  fill                 
+                  priority={false}
+                  sizes="(max-width: 980px) 100vw, 220px"
+                  className="media-img"
+                />
+              </div>
               <div className="project-content">
                 <h4>Informe de Joaquín Panichelli</h4>
                 <p className="muted">
@@ -212,7 +285,16 @@ export default function Home() {
             </article>
 
             <article className="project-card card">
-              <div className="project-media" role="img" aria-label="Análisis de los delanteros de 1ª RFEF 2024/2025" />
+              <div className="project-media" role="img" aria-label="Análisis de los delanteros de 1ª RFEF 2024/2025">
+                <Image
+                  src="/img/projects/"
+                  alt="Vista previa del informe"
+                  fill                 
+                  priority={false}
+                  sizes="(max-width: 980px) 100vw, 220px"
+                  className="media-img"
+                />
+              </div>
               <div className="project-content">
                 <h4>Análisis de los delanteros de 1ª RFEF 2024/2025</h4>
                 <p className="muted">
@@ -227,7 +309,16 @@ export default function Home() {
             </article>
 
             <article className="project-card card">
-              <div className="project-media" role="img" aria-label="FBRef LaLiga 20/21: EDA + 3D Scatter + Radar"/>
+              <div className="project-media" role="img" aria-label="FBRef LaLiga 20/21: EDA + 3D Scatter + Radar">
+                <Image
+                  src="/img/projects/"
+                  alt="Vista previa del gráfico"
+                  fill                 
+                  priority={false}
+                  sizes="(max-width: 980px) 100vw, 220px"
+                  className="media-img"
+                />
+              </div>
               <div className="project-content">
                 <h4>FBRef LaLiga 20/21: EDA + 3D y Radar</h4>
                 <p className="muted">
