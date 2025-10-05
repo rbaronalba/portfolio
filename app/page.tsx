@@ -139,7 +139,7 @@ export default function Home() {
             <article className="project-card card">
               <div className="project-media" role="img" aria-label="EDA y PCA para defensas de LaLiga">
                 <Image
-                  src="/img/projects/"
+                  src="/img/projects/eda.png"
                   alt="Vista previa del gráfico"
                   fill             
                   priority={false}
@@ -161,7 +161,7 @@ export default function Home() {
             <article className="project-card card">
               <div className="project-media" role="img" aria-label="Clusterización de defensas de LaLiga (K-Means)">
                 <Image
-                  src="/img/projects/"
+                  src="/img/projects/clusterdefensas.png"
                   alt="Vista previa del gráfico"
                   fill                 
                   priority={false}
@@ -186,7 +186,7 @@ export default function Home() {
             <article className="project-card card">
               <div className="project-media" role="img" aria-label="Clusterización de jugadores con K-Means y PCA (Python)">
                 <Image
-                  src="/img/projects/"
+                  src="/img/projects/kmeans.png"
                   alt="Vista previa del gráfico"
                   fill                 
                   priority={false}
@@ -215,7 +215,7 @@ export default function Home() {
             <article className="project-card card">
               <div className="project-media" role="img" aria-label="Rendimiento de jugadores del Sevilla FC">
                 <Image
-                  src="/img/projects/"
+                  src="/img/projects/sevilla.jpeg"
                   alt="Vista previa del tablero"
                   fill                 
                   priority={false}
@@ -239,7 +239,7 @@ export default function Home() {
             <article className="project-card card">
               <div className="project-media" role="img" aria-label="Desempeño de los centrales de LaLiga">
                 <Image
-                  src="/img/projects/"
+                  src="/img/projects/tableau.png"
                   alt="Vista previa del informe"
                   fill                 
                   priority={false}
@@ -263,7 +263,7 @@ export default function Home() {
             <article className="project-card card">
               <div className="project-media" role="img" aria-label="Informe de Joaquín Panichelli">
                 <Image
-                  src="/img/projects/"
+                  src="/img/projects/informe.jpeg"
                   alt="Vista previa del informe"
                   fill                 
                   priority={false}
@@ -287,7 +287,7 @@ export default function Home() {
             <article className="project-card card">
               <div className="project-media" role="img" aria-label="Análisis de los delanteros de 1ª RFEF 2024/2025">
                 <Image
-                  src="/img/projects/"
+                  src="/img/projects/1rfef.png"
                   alt="Vista previa del informe"
                   fill                 
                   priority={false}
@@ -311,7 +311,7 @@ export default function Home() {
             <article className="project-card card">
               <div className="project-media" role="img" aria-label="FBRef LaLiga 20/21: EDA + 3D Scatter + Radar">
                 <Image
-                  src="/img/projects/"
+                  src="/img/projects/messi.png"
                   alt="Vista previa del gráfico"
                   fill                 
                   priority={false}
