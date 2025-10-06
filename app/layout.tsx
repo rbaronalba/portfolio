@@ -1,6 +1,6 @@
 // app/layout.tsx
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,11 +16,17 @@ export const metadata: Metadata = {
     description:
       "Portfolio de proyectos: software, datos y machine learning aplicados al fútbol.",
     url: "https://rubenbarona.github.io/portfolio",
-    images: ["/assets/cover.png"],
+    images: ["/assets/cover.png"], 
   },
-  themeColor: "#0b0d10",
   twitter: { card: "summary_large_image" },
   alternates: { canonical: "https://rubenbarona.github.io/portfolio" },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f6f8fb" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b0d10" },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

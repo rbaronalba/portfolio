@@ -17,6 +17,23 @@
   --hero-to:   rgba(11,13,16,0.60);
 }
 
+/* Altura "virtual" de la barra fija (ajústala si cambias el nav) */
+:root { --nav-offset: 90px; }
+
+/* Scroll suave */
+html { scroll-behavior: smooth; }
+
+/* Aplica el offset a los elementos destino de los anclajes */
+section[id], header[id] {
+  scroll-margin-top: var(--nav-offset);
+}
+
+/* Opcional: valores distintos por breakpoint si el nav cambia de alto */
+@media (max-width: 980px){
+  :root { --nav-offset: 100px; }
+}
+
+
 [data-theme="light"] {
   --bg:#f6f8fb;
   --panel:#ffffff;
@@ -45,6 +62,18 @@ html,body {
 a { color:var(--brand); text-decoration:none }
 a:hover { color:var(--brand-2) }
 
+body {
+  background-image: url('/img/oscuro.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fija al viewport */
+}
+[data-theme='light'] body {
+  background-image: url('/img/blanco.png');
+}
+
+
 .container { max-width:1100px; margin:0 auto; padding:24px }
 
 /* Accesibilidad: skip link */
@@ -59,17 +88,35 @@ a:hover { color:var(--brand-2) }
 
 /* NAV */
 nav {
-  position:sticky; top:7px; z-index:20;
-  background: linear-gradient(180deg,var(--hero-from),var(--hero-to));
-  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 7px;
+  z-index: 20;
+  background: none;           /* Sin fondo en el contenedor general */
+  backdrop-filter: none;      /* Sin blur global */
+  box-shadow: none;
 }
-.nav-inner{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:14px 24px; border-radius:20px; max-width:1100px; margin:7px auto;
-  background: rgba(180,200,230,0.08);
-  border:1px solid var(--border);
+
+.nav-inner {
+  background: linear-gradient(180deg, var(--hero-from), var(--hero-to)); /* Tu gradiente/transparencia */
+  backdrop-filter: blur(8px);        /* Efecto de desenfoque */
+  border-radius: 20px;               /* Esquinas redondeadas */
   box-shadow: 0 2px 16px rgba(0,0,0,.10);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  max-width: 1100px;
+  margin: 7px auto;
+  border: 1px solid var(--border);
 }
+
+/* Si quieres sobreescribir estilos que pueden entrar en conflicto, usa !important: */
+.nav-inner {
+  background: linear-gradient(180deg, var(--hero-from), var(--hero-to)) !important;
+  backdrop-filter: blur(8px) !important;
+  /* ... */
+}
+
 .brand{ display:flex; gap:10px; align-items:center }
 .site-title { font-size:16px; letter-spacing:.4px; margin:0; font-weight:600; }
 .nav-right{ display:flex; gap:16px; align-items:center; }
@@ -104,9 +151,11 @@ nav {
 header.hero{
   display:flex; justify-content:center; align-items:center; text-align:center;
   padding:150px 30px 100px;
-  background: linear-gradient(180deg,var(--hero-from),var(--hero-to));
+  /*background: linear-gradient(180deg,var(--hero-from),var(--hero-to));*/
 }
-[data-theme="light"] header.hero{ box-shadow: inset 0 -1px 0 var(--border); }
+[data-theme="light"] header.hero{ 
+  box-shadow: inset 0 -1px 0 var(--border);
+ }
 
 .hero-inner{ max-width:800px; }
 .hero-title{ font-size:48px; font-weight:800; margin:0 0 16px; }
