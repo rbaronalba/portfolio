@@ -32,12 +32,15 @@ export const viewport: Viewport = {
   ],
 };
 
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body style={{ backgroundImage: `url(${prefix}/img/oscuro.png)` }}>
         <Providers>{children}</Providers>
       </body>
     </html>
   );
 }
+
