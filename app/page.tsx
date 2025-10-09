@@ -3,6 +3,7 @@ import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import MotionCard from "@/components/MotionCard";
+import Link from "next/link";
 
 export default function Home() {
   const year = new Date().getFullYear();
@@ -18,10 +19,10 @@ export default function Home() {
             <p className="site-title" aria-label="Rubén Barona">Rubén Barona</p>
           </div>
           <div className="nav-right">
-            <a className="btn" href="#inicio">Inicio</a>
-            <a className="btn" href="#sobre-mi">Sobre mí</a>
-            <a className="btn" href="#proyectos">Proyectos</a>
-            <a className="btn" href="#contacto">Contacto</a>
+            <Link className="btn" href="#inicio">Inicio</Link>
+            <Link className="btn" href="#sobre-mi">Sobre mí</Link>
+            <Link className="btn" href="#proyectos">Proyectos</Link>
+            <Link className="btn" href="#contacto">Contacto</Link>
             <ThemeToggle />
           </div>
         </div>
@@ -38,8 +39,8 @@ export default function Home() {
               para entornos de scouting y dirección deportiva.
             </p>
             <div className="hero-cta">
-              <a className="btn btn-lg" href="#proyectos">Ver proyectos</a>
-              <a className="btn btn-ghost btn-lg" href="/cv/CV_RubénBaronaAlba.pdf" download>Descargar CV</a>
+              <Link className="btn btn-lg" href="#proyectos" prefetch={false} >Ver proyectos</Link>
+              <a className="btn btn-ghost btn-lg" href="cv/CV_RubénBaronaAlba.pdf" type="application/pdf" rel="nooponer" download>Descargar CV</a>
             </div>
           </section>
         </Reveal>
@@ -65,7 +66,7 @@ export default function Home() {
                   <div className="chips">
                     <span className="chip"><img src="/img/html.svg" alt="HTML" className="stack-icon" />HTML</span>
                     <span className="chip"><img src="/img/css.svg" alt="CSS" className="stack-icon" />CSS</span>
-                    <span className="chip"><img src="/img/js.svg" alt="Javascript" className="stack-icon" />JavaScript</span>
+                    <span className="chip"><img src="/img/js.svg" alt="JavaScript" className="stack-icon" />JavaScript</span>
                     <span className="chip"><img src="/img/csharp.svg" alt="C#" className="stack-icon" />C#</span>
                     <span className="chip"><img src="/img/python.svg" alt="Python" className="stack-icon" />Python</span>
                     <span className="chip"><img src="/img/angular.svg" alt="Angular" className="stack-icon" />Angular</span>
@@ -119,7 +120,7 @@ export default function Home() {
               </a>
 
               <a
-                href="/pdf/Montecarlo.pdf"
+                href="pdf/Montecarlo.pdf"
                 download="Simulacion-Montecarlo.pdf"
                 className="card-link"
                 aria-label="Descargar PDF: Simulación de Montecarlo"
@@ -294,7 +295,7 @@ export default function Home() {
                       Informe individual de Joaquín Panichelli, delantero del CD Mirandés.
                     </p>
                     <div className="chips">
-                      <span className="chip">Power Point</span>
+                      <span className="chip">PowerPoint</span>
                       <span className="chip">Python</span>
                       <span className="chip">SQL Server</span>
                     </div>
@@ -325,7 +326,7 @@ export default function Home() {
                       Comparación del rendimiento ofensivo del top 20 delanteros de la categoría.
                     </p>
                     <div className="chips">
-                      <span className="chip">Power Point</span>
+                      <span className="chip">PowerPoint</span>
                       <span className="chip">Python</span>
                       <span className="chip">SQL Server</span>
                     </div>
@@ -376,7 +377,7 @@ export default function Home() {
       </main>
 
       <footer>
-        © <span>{year}</span> Rubén Barona Alba | Software Engineer at ICCA | Football Data Analyst - Sports Tech & Big
+        © <span>{year}</span> Rubén Barona Alba | Software Engineer @ ICCA | Football Data Analyst
       </footer>
     </>
   );
