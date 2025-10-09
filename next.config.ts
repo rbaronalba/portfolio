@@ -1,8 +1,10 @@
-const isProd = process.env.NODE_ENV === "production";
+const isProd = process.env.NODE_ENV === 'production';
 
-export default {
-  output: "export",               
-  basePath: isProd ? "/portfolio" : "",
-  assetPrefix: isProd ? "/portfolio/" : "",
-  images: { unoptimized: true },  
+const nextConfig = {
+  output: 'export',                
+  basePath: isProd ? '/portfolio' : '',
+  assetPrefix: isProd ? '/portfolio/' : '',
+  images: { unoptimized: true },    
+  trailingSlash: true,              
 };
+export default nextConfig;
