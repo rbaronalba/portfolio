@@ -22,14 +22,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    // opcional: site y creator si tienes usuario
-    // site: '@tu_usuario',
-    // creator: '@tu_usuario',
     images: ['https://rbaronaalba.github.io/portfolio/assets/cover.png'],
   },
-  // opcional pero recomendable
   robots: { index: true, follow: true },
-  // opcional si tienes iconos en /app
   icons: {
     icon: '/favicon.ico',
   },
