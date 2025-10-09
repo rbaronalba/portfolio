@@ -63,16 +63,16 @@ a { color:var(--brand); text-decoration:none }
 a:hover { color:var(--brand-2) }
 
 body {
-  background-image: none;
+  background-image: url('./img/oscuro.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; 
-}
-[data-theme='light'] body {
-  background-image: none;
+  background-attachment: fixed;
 }
 
+[data-theme='light'] body {
+  background-image: url('./img/blanco.png');
+}
 
 .container { max-width:1100px; margin:0 auto; padding:24px }
 
