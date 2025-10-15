@@ -64,24 +64,24 @@ export default function Home() {
               <div>
                 <h3 className="section-title">Tecnologías</h3>
                   <div className="chips">
-                    <span className="chip"><img src="img/html.svg" alt="HTML" className="stack-icon" />HTML</span>
-                    <span className="chip"><img src="img/css.svg" alt="CSS" className="stack-icon" />CSS</span>
-                    <span className="chip"><img src="img/js.svg" alt="JavaScript" className="stack-icon" />JavaScript</span>
-                    <span className="chip"><img src="img/csharp.svg" alt="C#" className="stack-icon" />C#</span>
-                    <span className="chip"><img src="img/python.svg" alt="Python" className="stack-icon" />Python</span>
-                    <span className="chip"><img src="img/angular.svg" alt="Angular" className="stack-icon" />Angular</span>
-                    <span className="chip"><img src="img/r.svg" alt="R" className="stack-icon" />R</span>
-                    <span className="chip"><img src="img/sqlserver.svg" alt="SQL Server" className="stack-icon" />SQL Server</span>
-                    <span className="chip"><img src="img/postgresql.svg" alt="PostgreSQL" className="stack-icon" />PostgreSQL</span>
-                    <span className="chip"><img src="img/influxdb.svg" alt="InfluxDB" className="stack-icon" />InfluxDB</span>
-                    <span className="chip"><img src="img/grafana.svg" alt="Grafana" className="stack-icon" />Grafana</span>
-                    <span className="chip"><img src="img/powerbi.png" alt="Power BI" className="stack-icon" />Power BI</span>
-                    <span className="chip"><img src="img/tableau.svg" alt="Tableau" className="stack-icon" />Tableau</span>
-                    <span className="chip"><img src="img/wyscout.jpeg" alt="Wyscout" className="stack-icon" />Wyscout</span>
-                    <span className="chip"><img src="img/nacsport.jpeg" alt="Nacsport" className="stack-icon" />Nacsport</span>
-                    <span className="chip"><img src="img/winccoa.png" alt="Win CC OA" className="stack-icon" />Win CC OA</span>
-                    <span className="chip"><img src="img/git.svg" alt="GitHub" className="stack-icon" />GitHub</span>
-                    <span className="chip"><img src="img/vscode.svg" alt="Visual Studio Code" className="stack-icon" />Visual Studio Code</span>
+                    <span className="chip"><img src="/img/html.svg" alt="HTML" className="stack-icon" />HTML</span>
+                    <span className="chip"><img src="/img/css.svg" alt="CSS" className="stack-icon" />CSS</span>
+                    <span className="chip"><img src="/img/js.svg" alt="JavaScript" className="stack-icon" />JavaScript</span>
+                    <span className="chip"><img src="/img/csharp.svg" alt="C#" className="stack-icon" />C#</span>
+                    <span className="chip"><img src="/img/python.svg" alt="Python" className="stack-icon" />Python</span>
+                    <span className="chip"><img src="/img/angular.svg" alt="Angular" className="stack-icon" />Angular</span>
+                    <span className="chip"><img src="/img/r.svg" alt="R" className="stack-icon" />R</span>
+                    <span className="chip"><img src="/img/sqlserver.svg" alt="SQL Server" className="stack-icon" />SQL Server</span>
+                    <span className="chip"><img src="/img/postgresql.svg" alt="PostgreSQL" className="stack-icon" />PostgreSQL</span>
+                    <span className="chip"><img src="/img/influxdb.svg" alt="InfluxDB" className="stack-icon" />InfluxDB</span>
+                    <span className="chip"><img src="/img/grafana.svg" alt="Grafana" className="stack-icon" />Grafana</span>
+                    <span className="chip"><img src="/img/powerbi.png" alt="Power BI" className="stack-icon" />Power BI</span>
+                    <span className="chip"><img src="/img/tableau.svg" alt="Tableau" className="stack-icon" />Tableau</span>
+                    <span className="chip"><img src="/img/wyscout.jpeg" alt="Wyscout" className="stack-icon" />Wyscout</span>
+                    <span className="chip"><img src="/img/nacsport.jpeg" alt="Nacsport" className="stack-icon" />Nacsport</span>
+                    <span className="chip"><img src="/img/winccoa.png" alt="Win CC OA" className="stack-icon" />Win CC OA</span>
+                    <span className="chip"><img src="/img/git.svg" alt="GitHub" className="stack-icon" />GitHub</span>
+                    <span className="chip"><img src="/img/vscode.svg" alt="Visual Studio Code" className="stack-icon" />Visual Studio Code</span>
                   </div>
               </div>
             </div>

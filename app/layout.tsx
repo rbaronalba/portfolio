@@ -6,29 +6,23 @@ import Providers from './providers';
 
 const inter = Inter({ subsets: ['latin'] });
 
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.DEPLOY_TARGET === 'gh-pages'
+    ? 'https://rbaronaalba.github.io/portfolio'
+    : 'https://portfolio-one-xi-38.vercel.app');
+
 export const metadata: Metadata = {
   title: 'Portfolio | Rubén Barona Alba',
-  description:
-    'Portfolio de proyectos del Máster en Big Data aplicado al Scouting en Fútbol',
-  metadataBase: new URL('https://rbaronaalba.github.io/portfolio'),
-  alternates: { canonical: 'https://rbaronaalba.github.io/portfolio' },
-  openGraph: {
-    type: 'website',
-    url: 'https://rbaronaalba.github.io/portfolio',
-    title: 'Portfolio | Rubén Barona Alba',
-    description:
-      'Portfolio de proyectos: software, datos y machine learning aplicados al fútbol.',
-    images: ['https://rbaronaalba.github.io/portfolio/assets/cover.png'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    images: ['https://rbaronaalba.github.io/portfolio/assets/cover.png'],
-  },
+  description: 'Portfolio de proyectos del Máster en Big Data aplicado al Scouting en Fútbol',
+  metadataBase: new URL(SITE_URL),
+  alternates: { canonical: SITE_URL },
+  openGraph: { type: 'website', url: SITE_URL, title: 'Portfolio | Rubén Barona Alba' },
+  twitter: { card: 'summary_large_image' },
   robots: { index: true, follow: true },
-  icons: {
-    icon: '/favicon.ico',
-  },
+  icons: { icon: '/favicon.ico' },
 };
+
 
 export const viewport: Viewport = {
   themeColor: [
