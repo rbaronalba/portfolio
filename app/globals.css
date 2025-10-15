@@ -305,3 +305,39 @@ html,body,.card,.btn,.icon-btn,.project-card,header.hero,nav,.nav-inner,.project
 @media (prefers-reduced-motion: reduce){
   * { animation: none !important; transition: none !important; }
 }
+
+.headline{
+  display: flex;
+  align-items: center;
+  gap: 12px;         
+  flex-wrap: nowrap; 
+}
+
+.hero-title{
+  margin: 0;
+  line-height: 1.1;
+  white-space: nowrap; 
+}
+
+@media (max-width: 680px){
+  .headline{ flex-wrap: wrap; }
+}
+
+.status-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(107,182,255,.12);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1;
+  box-shadow: 0 1px 6px rgba(0,0,0,.12);
+}
+.status-badge:hover{
+  border-color: var(--border-hover);
+  background: rgba(107,182,255,.2);
+}
+.status-badge svg{ width:16px;height:16px; }
