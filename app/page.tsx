@@ -120,7 +120,7 @@ export default function Home() {
               </a>
 
               <a
-                href="pdf/Montecarlo.pdf"
+                href="/pdf/Montecarlo.pdf"
                 download="Simulacion-Montecarlo.pdf"
                 className="card-link"
                 aria-label="Descargar PDF: Simulación de Montecarlo"
@@ -150,7 +150,7 @@ export default function Home() {
               </a>
 
               <a
-                href="pdf/EDA_PCA.pdf"
+                href="/pdf/EDA_PCA.pdf"
                 download="EDA_PCA.pdf"
                 className="card-link"
                 aria-label="Descargar PDF: EDA y PCA para defensas de LaLiga"
@@ -179,7 +179,7 @@ export default function Home() {
               </a>
 
               <a
-                href="pdf/Clusterdefensas.pdf"
+                href="/pdf/Clusterdefensas.pdf"
                 download="Cluster_defensas.pdf"
                 className="card-link"
                 aria-label="Descargar PDF: Clusterización de defensas"
@@ -211,7 +211,7 @@ export default function Home() {
               </a>
 
               <a
-                href="pdf/PowerBI.pdf"
+                href="/pdf/PowerBI.pdf"
                 download="Dashboard-Sevilla.pdf"
                 className="card-link"
                 aria-label="Descargar PDF: Rendimiento de jugadores del Sevilla FC"
@@ -242,7 +242,7 @@ export default function Home() {
               </a>
 
               <a
-                href="pdf/Tableau.pdf"
+                href="/pdf/Tableau.pdf"
                 download="Dashboard-Centrales.pdf"
                 className="card-link"
                 aria-label="Descargar PDF: Salida de balón de los centrales de LaLiga"
@@ -273,7 +273,7 @@ export default function Home() {
               </a>
 
               <a
-                href="pdf/Informe.pdf"
+                href="/pdf/Informe.pdf"
                 download="Informe-Panichelli.pdf"
                 className="card-link"
                 aria-label="Descargar PDF: Informe de Joaquín Panichelli"
@@ -304,7 +304,7 @@ export default function Home() {
               </a>
 
               <a
-                href="pdf/1rfef.pdf"
+                href="/pdf/1rfef.pdf"
                 download="Delanteros-1RFEF.pdf"
                 className="card-link"
                 aria-label="Descargar PDF: Análisis de delanteros 1ª RFEF"
