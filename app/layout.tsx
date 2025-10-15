@@ -6,17 +6,10 @@ import Providers from './providers';
 
 const inter = Inter({ subsets: ['latin'] });
 
-// Si quieres URLs absolutas en meta, pon NEXT_PUBLIC_SITE_URL en Vercel.
-// Si no, Next generará relativas y no pasa nada.
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
 export const metadata: Metadata = {
   title: 'Portfolio | Rubén Barona Alba',
-  icons: {
-    icon: [
-      { url: '/tab.png', type: 'image/png' }
-    ]
-  },
   description:
     'Portfolio de proyectos del Máster en Big Data aplicado al Scouting en Fútbol',
   ...(SITE_URL
