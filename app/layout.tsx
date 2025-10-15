@@ -6,23 +6,40 @@ import Providers from './providers';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.DEPLOY_TARGET === 'gh-pages'
-    ? 'https://rbaronaalba.github.io/portfolio'
-    : 'https://portfolio-one-xi-38.vercel.app');
+// Si quieres URLs absolutas en meta, pon NEXT_PUBLIC_SITE_URL en Vercel.
+// Si no, Next generará relativas y no pasa nada.
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
 export const metadata: Metadata = {
   title: 'Portfolio | Rubén Barona Alba',
-  description: 'Portfolio de proyectos del Máster en Big Data aplicado al Scouting en Fútbol',
-  metadataBase: new URL(SITE_URL),
-  alternates: { canonical: SITE_URL },
-  openGraph: { type: 'website', url: SITE_URL, title: 'Portfolio | Rubén Barona Alba' },
-  twitter: { card: 'summary_large_image' },
+  description:
+    'Portfolio de proyectos del Máster en Big Data aplicado al Scouting en Fútbol',
+  ...(SITE_URL
+    ? {
+        metadataBase: new URL(SITE_URL),
+        alternates: { canonical: SITE_URL },
+        openGraph: {
+          type: 'website',
+          url: SITE_URL,
+          title: 'Portfolio | Rubén Barona Alba',
+          description:
+            'Portfolio de proyectos: software, datos y machine learning aplicados al fútbol.',
+        },
+        twitter: { card: 'summary_large_image' },
+      }
+    : {
+        // Sin SITE_URL: metas sin absolutas (válido en Vercel igualmente)
+        openGraph: {
+          type: 'website',
+          title: 'Portfolio | Rubén Barona Alba',
+          description:
+            'Portfolio de proyectos: software, datos y machine learning aplicados al fútbol.',
+        },
+        twitter: { card: 'summary_large_image' },
+      }),
   robots: { index: true, follow: true },
   icons: { icon: '/favicon.ico' },
 };
-
 
 export const viewport: Viewport = {
   themeColor: [
