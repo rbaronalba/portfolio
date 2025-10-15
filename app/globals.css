@@ -234,9 +234,24 @@ h3.section-title{ font-size:20px; margin:0 0 10px; }
 .contact-form textarea{
   background-color:var(--panel);
   border:1px solid #2a3a52;
-  border-radius:12px; padding:12px 14px; font-size:15px; color:var(--text);
-  font-family:inherit; transition:border-color .2s;
+  border-radius:12px;
+  padding:12px 14px;
+  font-size:15px;
+  color:var(--text);
+  font-family:inherit;
+  transition:border-color .2s;
+  width: 100%;
+  box-sizing: border-box;
 }
+
+.contact-form textarea{
+  resize: vertical;  
+  max-width: 100%;      
+  min-height: 150px;   
+}
+
+.card.contact-form{ overflow: hidden; }
+
 .contact-form input:focus,
 .contact-form textarea:focus{
   outline:none; border-color:var(--brand);
@@ -290,5 +305,3 @@ html,body,.card,.btn,.icon-btn,.project-card,header.hero,nav,.nav-inner,.project
 @media (prefers-reduced-motion: reduce){
   * { animation: none !important; transition: none !important; }
 }
-
-
