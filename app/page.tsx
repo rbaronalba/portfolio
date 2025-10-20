@@ -32,22 +32,18 @@ export default function Home() {
 <header className="hero" id="inicio">
   <Reveal>
     <section className="hero-inner">
-      <div className="headline">
-        <h1 className="hero-title">Hola, soy Rubén Barona</h1>
-
-        <a
-          className="status-badge"
-          href="https://www.linkedin.com/in/ruben-barona-alba/" // tu URL
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Conectemos"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.06c.63-1.2 2.18-2.46 4.49-2.46 4.8 0 5.69 3.16 5.69 7.26V24h-5v-7.1c0-1.69-.03-3.86-2.35-3.86-2.36 0-2.72 1.84-2.72 3.74V24h-5V8z"/>
-          </svg>
-          Conectemos
-        </a>
-      </div>
+<div className="headline">
+  <h1 className="hero-title">Hola, soy Rubén Barona</h1>
+  <a
+    className="status-badge"
+    href="https://www.linkedin.com/in/ruben-barona-alba/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span className="badge-dot" aria-hidden="true" />
+    <span>Conectemos</span>
+  </a>
+</div>
 
       <p className="hero-desc">
         Transformo el dato en conocimiento útil para la toma de decisiones en el fútbol profesional. 
