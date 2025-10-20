@@ -18,7 +18,15 @@ export default function Home() {
             <img src="img/selfie.jpeg" alt="Selfie" className="avatar" />
             <p className="site-title" aria-label="Rubén Barona">Rubén Barona</p>
           </div>
-          <div className="nav-right">
+
+          {/* Toggle accesible sin JS */}
+          <input id="nav-toggle" type="checkbox" className="nav-toggle" aria-label="Abrir menú" />
+          <label htmlFor="nav-toggle" className="icon-btn hamburger" aria-controls="primary-menu" aria-expanded="false">
+            {/* puedes sustituir por un SVG si quieres */}
+            ☰
+          </label>
+
+          <div id="primary-menu" className="nav-right">
             <Link className="btn" href="#inicio">Inicio</Link>
             <Link className="btn" href="#sobre-mi">Sobre mí</Link>
             <Link className="btn" href="#proyectos">Proyectos</Link>
@@ -29,39 +37,37 @@ export default function Home() {
       </nav>
 
       {/* HERO */}
-<header className="hero" id="inicio">
-  <Reveal>
-    <section className="hero-inner">
-<div className="headline">
-  <h1 className="hero-title">Hola, soy Rubén Barona</h1>
-  <a
-    className="status-badge"
-    href="https://www.linkedin.com/in/ruben-barona-alba/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <span className="badge-dot" aria-hidden="true" />
-    <span>Conectemos</span>
-  </a>
-</div>
+      <header className="hero" id="inicio">
+        <Reveal>
+          <section className="hero-inner">
+            <div className="headline">
+              <h1 className="hero-title">Hola, soy Rubén Barona</h1>
+              <a
+                className="status-badge"
+                href="https://www.linkedin.com/in/ruben-barona-alba/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="badge-dot" aria-hidden="true" />
+                <span>Conectemos</span>
+              </a>
+            </div>
 
-      <p className="hero-desc">
-        Transformo el dato en conocimiento útil para la toma de decisiones en el fútbol profesional. 
-        Experiencia en análisis, visualización e implementación de soluciones digitales 
-        para entornos de scouting y dirección deportiva.
-      </p>
+            <p className="hero-desc">
+              Transformo el dato en conocimiento útil para la toma de decisiones en el fútbol profesional. 
+              Experiencia en análisis, visualización e implementación de soluciones digitales 
+              para entornos de scouting y dirección deportiva.
+            </p>
 
-      <div className="hero-cta">
-        <Link className="btn btn-lg" href="#proyectos" prefetch={false}>Ver proyectos</Link>
-        <a className="btn btn-ghost btn-lg" href="cv/CV_RubénBaronaAlba.pdf" type="application/pdf" rel="noopener" download>
-          Descargar CV
-        </a>
-      </div>
-    </section>
-  </Reveal>
-</header>
-
-
+            <div className="hero-cta">
+              <Link className="btn btn-lg" href="#proyectos" prefetch={false}>Ver proyectos</Link>
+              <a className="btn btn-ghost btn-lg" href="cv/CV_RubénBaronaAlba.pdf" type="application/pdf" rel="noopener" download>
+                Descargar CV
+              </a>
+            </div>
+          </section>
+        </Reveal>
+      </header>
 
       <main className="container">
         <section id="sobre-mi" style={{ marginTop: 36 }}>
