@@ -119,7 +119,7 @@ export default function Home() {
 
           <Reveal delay={0.05}>
             <div className="projects-list">
-              <a href="https://github.com/rbaronalba/cordoba-analytics" target="_blank" rel="noopener noreferrer" className="card-link">
+              <a href="https://www.linkedin.com/posts/ruben-barona-alba_sisepuede-dataengineering-footballanalytics-activity-7440683801825103872-zjiS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC-FBn4Bd72dnalFmFmiNqFtBFVKYWeY_XM" target="_blank" rel="noopener noreferrer" className="card-link">
                 <MotionCard>
                   <div className="project-media" role="img" aria-label="Análisis del Córdoba CF: simulación Monte Carlo de clasificación">
                     <Image
@@ -133,7 +133,7 @@ export default function Home() {
                   </div>
                   <div className="project-content">
                     <h4>Análisis de temporada del Córdoba CF</h4>
-                    <p className="muted">Pipeline de datos completo que extrae +150 métricas de Sofascore jornada a jornada y alimenta un dashboard interactivo con simulación Monte Carlo (100.000 escenarios) basada en distribución de Poisson.</p>
+                    <p className="muted">Pipeline que extrae +150 métricas de Sofascore jornada a jornada y las vuelca en un dashboard interactivo con tres vistas: KPIs de temporada, identidad táctica (radar, análisis por líneas y acciones defensivas) y comparativa Córdoba vs Liga. Incluye una simulación Monte Carlo de 100.000 escenarios con distribución de Poisson para proyectar la clasificación final.</p>
                     <div className="chips">
                       <span className="chip">Python</span>
                       <span className="chip">HTML</span>
