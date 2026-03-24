@@ -119,6 +119,32 @@ export default function Home() {
 
           <Reveal delay={0.05}>
             <div className="projects-list">
+              <a href="https://github.com/rbaronalba/cordoba-analytics" target="_blank" rel="noopener noreferrer" className="card-link">
+                <MotionCard>
+                  <div className="project-media" role="img" aria-label="Análisis del Córdoba CF: simulación Monte Carlo de clasificación">
+                    <Image
+                      src="/img/projects/cordoba.png"
+                      alt="Dashboard de análisis del Córdoba CF"
+                      fill
+                      priority={false}
+                      sizes="(max-width: 980px) 100vw, 220px"
+                      className="media-img"
+                    />
+                  </div>
+                  <div className="project-content">
+                    <h4>Análisis de temporada del Córdoba CF</h4>
+                    <p className="muted">Pipeline de datos completo que extrae +150 métricas de Sofascore jornada a jornada y alimenta un dashboard interactivo con simulación Monte Carlo (100.000 escenarios) basada en distribución de Poisson.</p>
+                    <div className="chips">
+                      <span className="chip">Python</span>
+                      <span className="chip">HTML</span>
+                      <span className="chip">CSS</span>
+                      <span className="chip">JS</span>
+                      <span className="chip">Sofascore API</span>
+                    </div>
+                  </div>
+                </MotionCard>
+              </a>
+
               <a href="https://www.linkedin.com/posts/ruben-barona-alba_tras-varios-meses-de-trabajo-y-aprendizaje-activity-7375892886506176512-oCZD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC-FBn4Bd72dnalFmFmiNqFtBFVKYWeY_XM" target="_blank" rel="noopener noreferrer" className="card-link">         
                 <MotionCard>
                   <div className="project-media" role="img" aria-label="Sistema de scouting inteligente">
