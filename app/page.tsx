@@ -75,12 +75,13 @@ export default function Home() {
             <div className="about-grid">
               <div>
                 <h3 className="section-title">Sobre mí</h3>
-                <article style={{ padding: 20 }}>
+                <article style={{ padding: 0 }}>
                   <p>
-                    Ingeniero informático especializado en desarrollo de software y análisis de datos, orientado a crear soluciones digitales eficientes y sostenibles.
-                    He finalizado el Máster en Big Data aplicado al Scouting en Fútbol, donde apliqué análisis, visualización y machine learning para apoyar la toma de decisiones deportivas basada en datos.
-                    Creo en el aprendizaje continuo, la calidad técnica y la entrega de valor. 
-                    Mi objetivo es seguir creciendo como ingeniero de software en proyectos que integren desarrollo, datos y tecnología aplicada.
+                    Ingeniero informático especializado en desarrollo frontend con Angular y TypeScript, con experiencia construyendo interfaces escalables para aplicaciones de datos en tiempo real.   
+                    Combino el desarrollo de software con el análisis de datos - completé el Máster en Big Data aplicado al Scouting en Fútbol, 
+                    donde diseñé un sistema de evaluación táctica procesando datos de eventos y vídeo con Python, R y algoritmos de clustering.
+                    Me interesa especialmente la intersección entre frontend engineering y sports tech: construir productos donde el código y los datos aporten valor real.
+                    Abierto a oportunidades en desarrollo frontend y análisis de datos en el ámbito del deporte.
                   </p>
                 </article>
               </div>
