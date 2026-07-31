@@ -134,7 +134,7 @@ export default function Home() {
                   </div>
                   <div className="project-content">
                     <h4>Planificación temporada 26/27 del Málaga CF</h4>
-                    <p className="muted">Pipeline que extrae +150 métricas de Sofascore jornada a jornada y las vuelca en un dashboard interactivo con tres vistas: KPIs de temporada, identidad táctica (radar, análisis por líneas y acciones defensivas) y comparativa Córdoba vs Liga. Incluye una simulación Monte Carlo de 100.000 escenarios con distribución de Poisson para proyectar la clasificación final.</p>
+                    <p className="muted">Sistema de scouting basado en datos que planifica la plantilla del Málaga CF para 26/27. Extrae 119 métricas por jugador de Sofascore y valores de Transfermarkt sobre un mercado de 18 ligas, selecciona los KPIs clave por posición con Boruta y Random Forest, y puntúa el encaje de cada candidato por similitud coseno frente al arquetipo del puesto. El resultado es un plan de altas y bajas con ocho fichajes y un once titular proyectado.</p>
                     <div className="chips">
                       <span className="chip">Python</span>
                       <span className="chip">Sofascore API</span>
