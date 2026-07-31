@@ -120,6 +120,29 @@ export default function Home() {
 
           <Reveal delay={0.05}>
             <div className="projects-list">
+                            <a href="/pdf/MálagaCF.pdf" target="_blank" rel="noopener noreferrer" className="card-link">
+                <MotionCard>
+                  <div className="project-media" role="img" aria-label="Planificación de la temporada 26/27 del Málaga CF">
+                    <Image
+                      src="/img/projects/malaga.png"
+                      alt="Temporada 26/27 Málaga CF"
+                      fill
+                      priority={false}
+                      sizes="(max-width: 980px) 100vw, 220px"
+                      className="media-img"
+                    />
+                  </div>
+                  <div className="project-content">
+                    <h4>Planificación temporada 26/27 del Málaga CF</h4>
+                    <p className="muted">Pipeline que extrae +150 métricas de Sofascore jornada a jornada y las vuelca en un dashboard interactivo con tres vistas: KPIs de temporada, identidad táctica (radar, análisis por líneas y acciones defensivas) y comparativa Córdoba vs Liga. Incluye una simulación Monte Carlo de 100.000 escenarios con distribución de Poisson para proyectar la clasificación final.</p>
+                    <div className="chips">
+                      <span className="chip">Python</span>
+                      <span className="chip">Sofascore API</span>
+                    </div>
+                  </div>
+                </MotionCard>
+              </a>
+
               <a href="https://www.linkedin.com/posts/ruben-barona-alba_sisepuede-dataengineering-footballanalytics-activity-7440683801825103872-zjiS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC-FBn4Bd72dnalFmFmiNqFtBFVKYWeY_XM" target="_blank" rel="noopener noreferrer" className="card-link">
                 <MotionCard>
                   <div className="project-media" role="img" aria-label="Análisis del Córdoba CF: simulación Monte Carlo de clasificación">
