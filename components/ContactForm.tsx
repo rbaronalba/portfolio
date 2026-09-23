@@ -1,44 +1,59 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { useT } from "@/components/Lang";
 
+const TOAST_MS = 3000; // igual que la animación de .toast-bar en globals.css
+
+type Toast = { ok: boolean; msg: string; id: number };
+
 export default function ContactForm() {
-  const [status, setStatus] = useState<null | string>(null);
+  const [toast, setToast] = useState<Toast | null>(null);
   const [loading, setLoading] = useState(false);
   const t = useT();
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setLoading(true);
-    setStatus(null);
+  useEffect(() => {
+    if (!toast) return;
+    const id = setTimeout(() => setToast(null), TOAST_MS);
+    return () => clearTimeout(id);
+  }, [toast]);
 
-    const fd = new FormData(e.currentTarget);
-    // honeypot
-    if (fd.get("company")) {
-      setStatus(t("Enviado.", "Sent."));
-      setLoading(false);
-      return;
-    }
-
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      body: JSON.stringify({
-        name: fd.get("name"),
-        email: fd.get("email"),
-        message: fd.get("message"),
-      }),
-      headers: { "Content-Type": "application/json" },
+  const notify = (ok: boolean) =>
+    setToast({
+      ok,
+      msg: ok ? t("Mensaje enviado. Te responderé pronto.", "Message sent. I'll get back to you soon.") : t("No se pudo enviar. Inténtalo de nuevo.", "Could not send. Please try again."),
+      id: Date.now(),
     });
 
-    if (res.ok) setStatus(t("Mensaje enviado.", "Message sent."));
-    else setStatus(t("No se pudo enviar. Inténtalo de nuevo.", "Could not send. Please try again."));
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    // honeypot
+    if (fd.get("company")) return notify(true);
+
+    setLoading(true);
+    let ok = false;
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify({
+          name: fd.get("name"),
+          email: fd.get("email"),
+          message: fd.get("message"),
+        }),
+        headers: { "Content-Type": "application/json" },
+      });
+      ok = res.ok;
+    } catch {}
     setLoading(false);
-    (e.target as HTMLFormElement).reset();
+    notify(ok);
+    if (ok) form.reset(); // si falla, no perder lo escrito
   }
 
   return (
     <div id="contacto">
-      <form className="contact-form" onSubmit={onSubmit} autoComplete="off" noValidate>
+      <form className="contact-form" onSubmit={onSubmit} autoComplete="off">
         <input
           type="text"
           name="company"
@@ -55,14 +70,21 @@ export default function ContactForm() {
         <label htmlFor="message">{t("Mensaje", "Message")}</label>
         <textarea id="message" name="message" rows={6} required placeholder={t("¿En qué puedo ayudarte?", "How can I help you?")} />
 
-        <div id="form-status" className="muted" role="status" aria-live="polite">
-          {status}
-        </div>
-
         <button className="btn btn-lg submit-btn" type="submit" disabled={loading}>
           {loading ? t("Enviando…", "Sending…") : t("Enviar mensaje", "Send message")}
         </button>
       </form>
+
+      {/* Portal: el panel tiene clip-path y recortaría un elemento fixed */}
+      {toast &&
+        createPortal(
+          <div key={toast.id} className={`toast ${toast.ok ? "ok" : "err"}`} role={toast.ok ? "status" : "alert"}>
+            <span className="toast-icon" aria-hidden="true">{toast.ok ? "✓" : "!"}</span>
+            <span>{toast.msg}</span>
+            <i className="toast-bar" aria-hidden="true" />
+          </div>,
+          document.body
+        )}
     </div>
   );
 }

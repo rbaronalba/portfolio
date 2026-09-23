@@ -24,11 +24,14 @@ export async function POST(req: Request) {
       auth: { user: SMTP_USER, pass: SMTP_PASS },
     });
 
+    // Lo que escribe el visitante no debe poder inyectar HTML en el correo
+    const esc = (v: unknown) =>
+      String(v).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
     const html = `
       <h2>Nuevo contacto</h2>
-      <p><b>Nombre:</b> ${name}</p>
-      <p><b>Email:</b> ${email}</p>
-      <p><b>Mensaje:</b><br/>${String(message).replace(/\n/g, "<br/>")}</p>
+      <p><b>Nombre:</b> ${esc(name)}</p>
+      <p><b>Email:</b> ${esc(email)}</p>
+      <p><b>Mensaje:</b><br/>${esc(message).replace(/\n/g, "<br/>")}</p>
     `;
 
     await transporter.sendMail({

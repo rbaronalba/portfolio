@@ -251,6 +251,32 @@ a:hover{ color:var(--brand-2) }
 .btn:hover{ border-color:var(--brand) }
 .submit-btn{ align-self:flex-end; }
 
+/* ---------- Notificación del formulario ---------- */
+.toast{
+  --tone:#34d399;
+  position:fixed; top:76px; right:24px; z-index:100; overflow:hidden;
+  display:flex; align-items:center; gap:12px;
+  min-width:260px; max-width:calc(100vw - 32px); padding:14px 18px 17px;
+  border-radius:16px; border:1px solid var(--border);
+  background:var(--panel); color:var(--text); font-size:14px;
+  box-shadow:0 18px 50px rgba(0,0,0,.35);
+  animation:toast-in .45s var(--ease);
+}
+.toast.err{ --tone:#f87171; }
+.toast-icon{
+  display:grid; place-items:center; flex:none; width:24px; height:24px; border-radius:999px;
+  background:color-mix(in srgb, var(--tone) 18%, transparent); color:var(--tone); font-weight:800; font-size:13px;
+}
+/* Se vacía de derecha a izquierda en 3s, como un reloj de arena */
+.toast-bar{
+  position:absolute; left:0; bottom:0; width:100%; height:3px;
+  background:var(--tone); transform-origin:left;
+  animation:toast-bar 3s linear forwards;
+}
+@keyframes toast-in{ from{ opacity:0; transform:translateX(24px) } to{ opacity:1; transform:none } }
+@keyframes toast-bar{ from{ transform:scaleX(1) } to{ transform:scaleX(0) } }
+@media (max-width:639px){ .toast{ right:16px; left:16px; top:72px; } }
+
 :focus-visible{ outline:2px solid var(--brand); outline-offset:2px; }
 
 @media (prefers-reduced-motion: reduce){

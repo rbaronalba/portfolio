@@ -243,10 +243,10 @@ export default function Home() {
       <>
         <h2 id="panel-title">{t("Interfaces que se usan", "Interfaces people use")}</h2>
         <p>{t(
-          "Trabajo como Frontend Engineer en ICCA, desarrollando con Angular y TypeScript la plataforma del Centro de Gestión y Control del Transporte Público de Andalucía, incluido el módulo de información al viajero en tiempo real.",
-          "I work as a Frontend Engineer at ICCA, building the Andalusia Public Transport Control & Management Center platform with Angular and TypeScript, including the real-time passenger information module."
+          "Diseño y desarrollo webs y tiendas online a medida para marcas y negocios. Webs rápidas, fáciles de gestionar y pensadas para vender: optimizo el SEO para que te encuentren en Google, mejoro la velocidad de carga y automatizo procesos del día a día como pedidos, formularios, inventario o emails, para que dediques tu tiempo a lo importante.",
+          "I design and build custom websites and online stores for brands and businesses. Fast sites that are easy to manage and built to sell: I optimize SEO so people find you on Google, improve loading speed and automate everyday processes such as orders, forms, inventory or emails, so you can spend your time on what matters."
         )}</p>
-        <p>{t("Además, diseño y desarrollo tiendas online para marcas:", "I also design and build online stores for brands:")}</p>
+        <p>{t("Algunos proyectos:", "Some projects:")}</p>
         <ProjectList items={WEB} lang={lang} />
       </>
     ),
