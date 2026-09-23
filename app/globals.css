@@ -177,6 +177,8 @@ section{ padding:18px 24px }
 h3.section-title{ font-size:20px; margin:0 0 10px; }
 
 .about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:var(--gap); }
+.tabs{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+.tabs .btn{ font:inherit; cursor:pointer; }
 .projects-list{ display:grid; grid-template-columns:1fr; gap:var(--gap); }
 
 .project-card{

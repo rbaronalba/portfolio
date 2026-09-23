@@ -1,9 +1,11 @@
 "use client";
 import { useState } from "react";
+import { useT } from "@/components/Lang";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<null | string>(null);
   const [loading, setLoading] = useState(false);
+  const t = useT();
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -13,7 +15,7 @@ export default function ContactForm() {
     const fd = new FormData(e.currentTarget);
     // honeypot
     if (fd.get("company")) {
-      setStatus("Enviado.");
+      setStatus(t("Enviado.", "Sent."));
       setLoading(false);
       return;
     }
@@ -28,8 +30,8 @@ export default function ContactForm() {
       headers: { "Content-Type": "application/json" },
     });
 
-    if (res.ok) setStatus("Mensaje enviado.");
-    else setStatus("No se pudo enviar. Intentélo de nuevo.");
+    if (res.ok) setStatus(t("Mensaje enviado.", "Message sent."));
+    else setStatus(t("No se pudo enviar. Inténtalo de nuevo.", "Could not send. Please try again."));
     setLoading(false);
     (e.target as HTMLFormElement).reset();
   }
@@ -44,21 +46,21 @@ export default function ContactForm() {
           style={{ position: "absolute", left: -9999, opacity: 0 }}
           aria-hidden="true"
         />
-        <label htmlFor="name">Nombre</label>
-        <input id="name" name="name" required placeholder="Escribe tu nombre" />
+        <label htmlFor="name">{t("Nombre", "Name")}</label>
+        <input id="name" name="name" required placeholder={t("Escribe tu nombre", "Your name")} />
 
-        <label htmlFor="email">Correo electrónico</label>
-        <input id="email" name="email" type="email" required placeholder="tucorreo@ejemplo.com" />
+        <label htmlFor="email">{t("Correo electrónico", "Email")}</label>
+        <input id="email" name="email" type="email" required placeholder={t("tucorreo@ejemplo.com", "you@example.com")} />
 
-        <label htmlFor="message">Mensaje</label>
-        <textarea id="message" name="message" rows={6} required placeholder="¿En qué puedo ayudarte?" />
+        <label htmlFor="message">{t("Mensaje", "Message")}</label>
+        <textarea id="message" name="message" rows={6} required placeholder={t("¿En qué puedo ayudarte?", "How can I help you?")} />
 
         <div id="form-status" className="muted" role="status" aria-live="polite">
           {status}
         </div>
 
         <button className="btn btn-lg submit-btn" type="submit" disabled={loading}>
-          {loading ? "Enviando…" : "Enviar mensaje"}
+          {loading ? t("Enviando…", "Sending…") : t("Enviar mensaje", "Send message")}
         </button>
       </form>
     </div>

@@ -2,6 +2,7 @@
 
 import { ThemeProvider } from 'next-themes';
 import { ReactNode } from 'react';
+import { LangProvider } from '@/components/Lang';
 
 export default function Providers({ children }: { children: ReactNode }) {
   return (
@@ -11,7 +12,7 @@ export default function Providers({ children }: { children: ReactNode }) {
       enableSystem
       disableTransitionOnChange
     >
-      {children}
+      <LangProvider>{children}</LangProvider>
     </ThemeProvider>
   );
 }
