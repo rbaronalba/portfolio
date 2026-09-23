@@ -7,11 +7,8 @@ export default function ThemeToggle() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
 
   useEffect(() => {
-    const prefersDark =
-      typeof window !== "undefined" &&
-      window.matchMedia?.("(prefers-color-scheme: dark)").matches;
     const stored = (localStorage.getItem(KEY) as "dark" | "light") || null;
-    const initial = stored || (prefersDark ? "dark" : "light");
+    const initial = stored || "dark";
     setTheme(initial);
     document.documentElement.setAttribute("data-theme", initial);
   }, []);

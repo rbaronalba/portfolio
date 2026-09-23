@@ -3,6 +3,7 @@ import './globals.css';
 import type { Metadata, Viewport } from 'next';
 import { Inter, Unbounded } from 'next/font/google';
 import Providers from './providers';
+import logo from './logo.png';
 
 const inter = Inter({ subsets: ['latin'] });
 const unbounded = Unbounded({ subsets: ['latin'], variable: '--font-display' });
@@ -36,6 +37,7 @@ export const metadata: Metadata = {
         },
         twitter: { card: 'summary_large_image' },
       }),
+  icons: { icon: logo.src },
   robots: { index: true, follow: true }
 };
 
