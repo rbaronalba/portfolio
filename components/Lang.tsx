@@ -60,7 +60,7 @@ export function LangToggle() {
       title={lang === "es" ? "Switch to English" : "Cambiar a español"}
       aria-label={lang === "es" ? "Switch to English" : "Cambiar a español"}
     >
-      {lang === "es" ? <FlagUK /> : <FlagES />}
+      <span className="spin">{lang === "es" ? <FlagUK /> : <FlagES />}</span>
     </button>
   );
 }

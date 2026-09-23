@@ -1,10 +1,11 @@
 // app/layout.tsx
 import './globals.css';
 import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Unbounded } from 'next/font/google';
 import Providers from './providers';
 
 const inter = Inter({ subsets: ['latin'] });
+const unbounded = Unbounded({ subsets: ['latin'], variable: '--font-display' });
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
@@ -47,7 +48,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang="es" className={unbounded.variable} suppressHydrationWarning>
       <body className={inter.className}>
         <Providers>{children}</Providers>
       </body>

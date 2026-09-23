@@ -37,7 +37,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div id="contacto" className="card contact-form">
+    <div id="contacto">
       <form className="contact-form" onSubmit={onSubmit} autoComplete="off" noValidate>
         <input
           type="text"
