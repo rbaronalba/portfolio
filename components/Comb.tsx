@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState, ReactNode } from "react";
 
 export type HexRect = { x: number; y: number; w: number; h: number };
-export type NavItem = { id: string; label: string; icon: ReactNode; href?: string; download?: boolean };
+export type NavItem = { id: string; label: string; icon: ReactNode; href?: string };
 
 type Cell = { x: number; y: number };
 type Layout = { w: number; h: number; cells: Cell[]; center: number; ring: number[] };
@@ -126,7 +126,7 @@ export default function Comb({
         );
         return it.href ? (
           <a key={i} ref={ref} className={cls} style={style} href={it.href} aria-label={it.label}
-            {...(it.download ? { download: true } : { target: "_blank", rel: "noopener noreferrer" })}>
+            target="_blank" rel="noopener noreferrer">
             {face}
           </a>
         ) : (

@@ -206,11 +206,23 @@ export default function Home() {
     { id: "web", label: "Web", icon: ICONS.web },
     { id: "contact", label: t("Contacto", "Contact"), icon: ICONS.contact },
     { id: "linkedin", label: "LinkedIn", icon: ICONS.linkedin, href: "https://www.linkedin.com/in/ruben-barona-alba/" },
-    { id: "cv", label: "CV", icon: ICONS.cv, href: t("/cv/CV_RubenBaronaAlba.pdf", "/cv/RubenBaronaAlba_CV.pdf"), download: true },
+    { id: "cv", label: "CV", icon: ICONS.cv },
     { id: "about", label: t("Sobre mí", "About"), icon: ICONS.about },
   ];
 
+  const cv = t("/cv/CV_RubenBaronaAlba.pdf", "/cv/RubenBaronaAlba_CV.pdf");
+
   const panels: Record<string, ReactNode> = {
+    cv: (
+      <>
+        <div className="cv-head">
+          <h2 id="panel-title">{t("Currículum", "Resume")}</h2>
+          <a className="btn" href={cv} download>{t("Descargar PDF", "Download PDF")}</a>
+        </div>
+        {/* ponytail: PNG exportado del PDF con pdftoppm; regenerar si cambia el CV */}
+        <img className="cv-page" src={t("/cv/cv-es.png", "/cv/cv-en.png")} alt={t("CV de Rubén Barona Alba", "Rubén Barona Alba's CV")} />
+      </>
+    ),
     about: (
       <>
         <h2 id="panel-title">{t("Código, datos y fútbol", "Code, data and football")}</h2>
