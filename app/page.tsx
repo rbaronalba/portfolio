@@ -210,17 +210,17 @@ export default function Home() {
     { id: "about", label: t("Sobre mí", "About"), icon: ICONS.about },
   ];
 
-  const cv = t("/cv/CV_RubenBaronaAlba.pdf", "/cv/RubenBaronaAlba_CV.pdf");
+  const cv = `/cv/${t("esp", "ing")}/CV_RubenBaronaAlba`;
 
   const panels: Record<string, ReactNode> = {
     cv: (
       <>
         <div className="cv-head">
           <h2 id="panel-title">{t("Currículum", "Resume")}</h2>
-          <a className="btn" href={cv} download>{t("Descargar PDF", "Download PDF")}</a>
+          <a className="btn" href={`${cv}.pdf`} download>{t("Descargar PDF", "Download PDF")}</a>
         </div>
         {/* ponytail: PNG exportado del PDF con pdftoppm; regenerar si cambia el CV */}
-        <img className="cv-page" src={t("/cv/cv-es.png", "/cv/cv-en.png")} alt={t("CV de Rubén Barona Alba", "Rubén Barona Alba's CV")} />
+        <img className="cv-page" src={`${cv}.png`} alt={t("CV de Rubén Barona Alba", "Rubén Barona Alba's CV")} />
       </>
     ),
     about: (
