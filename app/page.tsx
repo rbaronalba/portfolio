@@ -20,7 +20,7 @@ const FOOTBALL: Project[] = [
     chips: ["Python", "Sofascore API"],
   },
   {
-    href: "https://www.linkedin.com/posts/ruben-barona-alba_sisepuede-dataengineering-footballanalytics-activity-7440683801825103872-zjiS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC-FBn4Bd72dnalFmFmiNqFtBFVKYWeY_XM",
+    href: "https://github.com/rbaronalba/cordoba-analytics",
     img: "/img/projects/cordoba.png",
     title: ["Análisis de temporada del Córdoba CF", "Córdoba CF season analysis"],
     desc: [
@@ -132,6 +132,16 @@ const FOOTBALL: Project[] = [
 ];
 
 const WEB: Project[] = [
+  {
+    href: "https://github.com/rbaronalba/sprintio",
+    img: "/img/projects/sprintio.png",
+    title: ["Sprintio", "Sprintio"],
+    desc: [
+      "Herramienta de gestión de proyectos estilo Trello autoalojada: espacios de trabajo, tableros, listas y tarjetas con drag-and-drop, checklists, comentarios, adjuntos y seguimiento de tiempo. Actualizaciones y notificaciones en tiempo real, login con email/contraseña o Microsoft (Azure AD). Backend NestJS con Prisma, PostgreSQL y Redis, frontend Angular, desplegado con Docker y Caddy.",
+      "Self-hosted Trello-style project management tool: workspaces, boards, lists and cards with drag-and-drop, checklists, comments, attachments and time tracking. Realtime updates and notifications, email/password or Microsoft (Azure AD) sign-in. NestJS backend with Prisma, PostgreSQL and Redis, Angular frontend, deployed with Docker and Caddy.",
+    ],
+    chips: ["Angular", "NestJS", "Prisma", "PostgreSQL", "Redis", "Docker"],
+  },
   {
     href: "https://espaliuheritage.com",
     img: "/img/projects/espaliuheritage.jpg",
