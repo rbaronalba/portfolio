@@ -9,6 +9,8 @@ export default function ThemeToggle() {
   useEffect(() => {
     const stored = (localStorage.getItem(KEY) as "dark" | "light") || null;
     const initial = stored || "dark";
+    // ponytail: leído tras montar a propósito, el servidor no tiene localStorage (evita mismatch de hidratación)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTheme(initial);
     document.documentElement.setAttribute("data-theme", initial);
   }, []);

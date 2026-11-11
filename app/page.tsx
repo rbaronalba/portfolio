@@ -6,9 +6,22 @@ import Comb, { HexRect, NavItem } from "@/components/Comb";
 import MorphPanel from "@/components/MorphPanel";
 import { LangToggle, useT, useLang } from "@/components/Lang";
 
-type Project = { href: string; download?: string; img: string; title: [string, string]; desc: [string, string]; chips: string[] };
+type Project = { href: string; download?: string; img?: string; title: [string, string]; desc: [string, string]; chips: string[] };
 
 const FOOTBALL: Project[] = [
+  {
+    href: "https://www.linkedin.com/posts/ruben-barona-alba_tras-varios-meses-de-trabajo-y-aprendizaje-activity-7375892886506176512-oCZD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC-FBn4Bd72dnalFmFmiNqFtBFVKYWeY_XM",
+    img: "/img/projects/tfm.png",
+    title: [
+      "Sistema de scouting inteligente para el RC Celta: evaluación de fichajes según el perfil táctico",
+      "Intelligent scouting system for RC Celta: evaluating signings by tactical profile",
+    ],
+    desc: [
+      "Diseño y desarrollo de una herramienta automatizada y escalable que evalúa el grado de adecuación táctica de jugadores externos al Real Club Celta de Vigo según su modelo de juego, a partir de un análisis exhaustivo de datos de rendimiento del club y de la aplicación de técnicas avanzadas de Machine Learning.",
+      "Design and development of an automated, scalable tool that evaluates how well external players fit Real Club Celta de Vigo's playing model, based on an in-depth analysis of the club's performance data and advanced Machine Learning techniques.",
+    ],
+    chips: ["Python"],
+  },
   {
     href: "/pdf/MálagaCF.pdf",
     img: "/img/projects/malaga.png",
@@ -28,19 +41,6 @@ const FOOTBALL: Project[] = [
       "Pipeline that extracts 150+ Sofascore metrics matchday by matchday and feeds them into an interactive dashboard with three views: season KPIs, tactical identity (radar, line-by-line analysis and defensive actions) and Córdoba vs league comparison. Includes a 100,000-scenario Monte Carlo simulation with a Poisson distribution to project the final standings.",
     ],
     chips: ["Python", "HTML", "CSS", "JS", "Sofascore API"],
-  },
-  {
-    href: "https://www.linkedin.com/posts/ruben-barona-alba_tras-varios-meses-de-trabajo-y-aprendizaje-activity-7375892886506176512-oCZD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC-FBn4Bd72dnalFmFmiNqFtBFVKYWeY_XM",
-    img: "/img/projects/tfm.png",
-    title: [
-      "Sistema de scouting inteligente para el RC Celta: evaluación de fichajes según el perfil táctico",
-      "Intelligent scouting system for RC Celta: evaluating signings by tactical profile",
-    ],
-    desc: [
-      "Diseño y desarrollo de una herramienta automatizada y escalable que evalúa el grado de adecuación táctica de jugadores externos al Real Club Celta de Vigo según su modelo de juego, a partir de un análisis exhaustivo de datos de rendimiento del club y de la aplicación de técnicas avanzadas de Machine Learning.",
-      "Design and development of an automated, scalable tool that evaluates how well external players fit Real Club Celta de Vigo's playing model, based on an in-depth analysis of the club's performance data and advanced Machine Learning techniques.",
-    ],
-    chips: ["Python"],
   },
   {
     href: "/pdf/Montecarlo.pdf",
@@ -133,12 +133,22 @@ const FOOTBALL: Project[] = [
 
 const WEB: Project[] = [
   {
+    href: "https://github.com/rbaronalba/job-agents",
+    img: "/img/projects/multiagente.jpg",
+    title: ["Sistema multiagente de automatización con IA", "Multi-agent AI automation system"],
+    desc: [
+      "Diseño y orquesto varios agentes de IA en paralelo con Claude, con integración de Gmail y automatización de navegador, para automatizar búsqueda, seguimiento y envío de procesos.",
+      "I design and orchestrate several AI agents in parallel with Claude, with Gmail integration and browser automation, to automate search, tracking and submission of processes.",
+    ],
+    chips: ["Python", "Claude", "APIs REST", "SQLite"],
+  },
+  {
     href: "https://github.com/rbaronalba/sprintio",
     img: "/img/projects/sprintio.png",
     title: ["Sprintio", "Sprintio"],
     desc: [
-      "Herramienta de gestión de proyectos estilo Trello autoalojada: espacios de trabajo, tableros, listas y tarjetas con drag-and-drop, checklists, comentarios, adjuntos y seguimiento de tiempo. Actualizaciones y notificaciones en tiempo real, login con email/contraseña o Microsoft (Azure AD). Backend NestJS con Prisma, PostgreSQL y Redis, frontend Angular, desplegado con Docker y Caddy.",
-      "Self-hosted Trello-style project management tool: workspaces, boards, lists and cards with drag-and-drop, checklists, comments, attachments and time tracking. Realtime updates and notifications, email/password or Microsoft (Azure AD) sign-in. NestJS backend with Prisma, PostgreSQL and Redis, Angular frontend, deployed with Docker and Caddy.",
+      "Herramienta de gestión de proyectos estilo Trello autoalojada: espacios de trabajo, tableros, listas y tarjetas con drag-and-drop, checklists, comentarios, adjuntos y seguimiento de tiempo. Actualizaciones y notificaciones en tiempo real, login con email/contraseña o Microsoft (Azure AD). Backend NestJS con Prisma, PostgreSQL y Redis, frontend Angular, completa y containerizada con Docker Compose y Caddy (HTTPS automático).",
+      "Self-hosted Trello-style project management tool: workspaces, boards, lists and cards with drag-and-drop, checklists, comments, attachments and time tracking. Realtime updates and notifications, email/password or Microsoft (Azure AD) sign-in. NestJS backend with Prisma, PostgreSQL and Redis, Angular frontend, complete and containerized with Docker Compose and Caddy (automatic HTTPS).",
     ],
     chips: ["Angular", "NestJS", "Prisma", "PostgreSQL", "Redis", "Docker"],
   },
@@ -166,10 +176,12 @@ const WEB: Project[] = [
 
 const STACK: [string, string][] = [
   ["Angular", "angular.svg"], ["React", "react.svg"], ["TypeScript", "typescript.svg"], ["JavaScript", "js.svg"],
-  ["HTML", "html.svg"], ["CSS", "css.svg"], ["RxJS", "rxjs.svg"], ["Jest", "jest.svg"], ["C#", "csharp.svg"],
-  ["Python", "python.svg"], ["R", "r.svg"], ["SQL Server", "sqlserver.svg"], ["PostgreSQL", "postgresql.svg"],
+  ["NestJS", "nestjs.svg"], ["HTML", "html.svg"], ["CSS", "css.svg"], ["RxJS", "rxjs.svg"], ["Jest", "jest.svg"],
+  ["Playwright", "playwright.svg"], ["C#", "csharp.svg"], ["Python", "python.svg"], ["R", "r.svg"],
+  ["SQL Server", "sqlserver.svg"], ["PostgreSQL", "postgresql.svg"], ["Redis", "redis.svg"],
   ["InfluxDB", "influxdb.svg"], ["Grafana", "grafana.svg"], ["Power BI", "powerbi.png"], ["Tableau", "tableau.svg"],
-  ["Wyscout", "wyscout.jpeg"], ["Nacsport", "nacsport.jpeg"], ["WinCC OA", "winccoa.png"], ["Git", "git.svg"],
+  ["Claude", "claude.svg"], ["n8n", "n8n.svg"], ["SonarQube", "sonarqube.svg"], ["Docker", "docker.svg"],
+  ["Git", "git.svg"],
 ];
 
 // Iconos de trazo fino (24x24)
@@ -190,9 +202,9 @@ function ProjectList({ items, lang }: { items: Project[]; lang: "es" | "en" }) {
   return (
     <div className="plist">
       {items.map((p) => (
-        <a key={p.href} className="pitem card-link" href={p.href}
+        <a key={p.href} className={`pitem card-link${p.img ? "" : " no-img"}`} href={p.href}
           {...(p.download ? { download: p.download } : { target: "_blank", rel: "noopener noreferrer" })}>
-          <img src={p.img} alt="" loading="lazy" />
+          {p.img && <img src={p.img} alt={p.title[k]} loading="lazy" />}
           <div>
             <h3>{p.title[k]}</h3>
             <p>{p.desc[k]}</p>
@@ -231,24 +243,29 @@ export default function Home() {
         </div>
         {/* ponytail: PNG exportado del PDF con pdftoppm; regenerar si cambia el CV */}
         <img className="cv-page" src={`${cv}.png`} alt={t("CV de Rubén Barona Alba", "Rubén Barona Alba's CV")} />
+        <div className="cv-links">
+          <a href="mailto:barona.ruben@gmail.com">barona.ruben@gmail.com</a>
+          <a href="https://www.linkedin.com/in/ruben-barona-alba/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/rbaronalba" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
       </>
     ),
     about: (
       <>
-        <h2 id="panel-title">{t("Código, datos y fútbol", "Code, data and football")}</h2>
+        <h2 id="panel-title">{t("Software, datos e IA", "Software, data and AI")}</h2>
         <p>{t(
-          "Soy ingeniero informático especializado en desarrollo frontend con Angular y TypeScript. Construyo interfaces escalables para aplicaciones de datos en tiempo real.",
-          "I'm a computer engineer specialized in frontend development with Angular and TypeScript. I build scalable interfaces for real-time data applications."
+          "Soy ingeniero informático con experiencia construyendo software en producción (Angular, TypeScript, Python) y foco actual en productos con LLMs y agentes de IA. Diseño y orquesto agentes de IA con Claude para automatizar procesos complejos, y he construido Sprintio, una herramienta full stack de gestión de proyectos.",
+          "I'm a computer engineer with production experience building software (Angular, TypeScript, Python) and a current focus on LLM-based products and AI agents. I design and orchestrate AI agents with Claude to automate complex processes, and I built Sprintio, a full stack project management tool."
         )}</p>
         <p>{t(
-          "Combino el desarrollo de software con el análisis de datos: completé el Máster en Big Data aplicado al Scouting en Fútbol, donde diseñé un sistema de evaluación táctica procesando datos de eventos y vídeo con Python, R y algoritmos de clustering.",
-          "I combine software development with data analysis: I completed a Master's Degree in Big Data applied to Football Scouting, where I designed a tactical evaluation system processing event and video data with Python, R and clustering algorithms."
+          "Combino el desarrollo de software con el análisis de datos: tengo el Máster en Big Data aplicado al Scouting en Fútbol (UCAM, Sports Data Campus), donde construí modelos de evaluación de jugadores para el RC Celta de Vigo y el Málaga CF.",
+          "I combine software development with data analysis: I hold a Master's in Big Data applied to Football Scouting (UCAM, Sports Data Campus), where I built player evaluation models for RC Celta de Vigo and Málaga CF."
         )}</p>
         <p>{t(
-          "Me interesa la intersección entre frontend engineering y sports tech: productos donde el código y los datos aporten valor real. Abierto a oportunidades en desarrollo frontend y análisis de datos en el deporte.",
-          "I'm drawn to the intersection of frontend engineering and sports tech: products where code and data deliver real value. Open to opportunities in frontend development and sports data analysis."
+          "Quiero orientar mi carrera al desarrollo de productos basados en LLMs y agentes de IA, combinando mi experiencia en desarrollo de software con integración de modelos, orquestación y automatización. También estoy abierto a oportunidades en el mundo de los datos, en especial análisis y modelado aplicados al deporte.",
+          "I want to steer my career toward building LLM-based products and AI agents, combining my software development experience with model integration, orchestration and automation. I'm also open to opportunities in data, especially analysis and modeling applied to sport."
         )}</p>
-        <ul className="tags">{STACK.map(([name, img]) => <li key={name}><img src={`/img/${img}`} alt="" />{name}</li>)}</ul>
+        <ul className="tags">{STACK.map(([name, img]) => <li key={name}><img src={`/img/${img}`} alt={name} />{name}</li>)}</ul>
       </>
     ),
     futbol: (
@@ -276,8 +293,8 @@ export default function Home() {
       <>
         <h2 id="panel-title">{t("¿Hablamos?", "Let's talk")}</h2>
         <p>{t(
-          "Para proyectos web, oportunidades en frontend o análisis de datos en el deporte. También en ",
-          "For web projects, frontend roles or sports data analysis. Also at "
+          "Para oportunidades en desarrollo de software, productos con IA o análisis de datos en el deporte. También en ",
+          "For software development roles, AI products or sports data analysis. Also at "
         )}<a href="mailto:barona.ruben@gmail.com">barona.ruben@gmail.com</a>.</p>
         <ContactForm />
       </>
@@ -286,7 +303,7 @@ export default function Home() {
 
   return (
     <div className="stage">
-      <h1 className="sr-only">Rubén Barona Alba. Frontend Engineer & Football Data Analyst</h1>
+      <h1 className="sr-only">Rubén Barona Alba. Software Engineer | Full Stack · AI Applications</h1>
 
       <Comb items={items} avatar="/img/selfie.jpeg" dim={dim} hiddenId={open?.id}
         onOpen={(id, rect) => { setOpen({ id, rect }); setDim(true); }} />
@@ -297,12 +314,17 @@ export default function Home() {
       </header>
 
       <div className="toolbar">
+        <a className="icon-btn" href="https://github.com/rbaronalba" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+          <span className="spin" aria-hidden="true">
+            {icon(<path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 1.9 5.4 2.2 5.4 2.2a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 8.6c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" />)}
+          </span>
+        </a>
         <ThemeToggle />
         <LangToggle />
       </div>
 
       <footer className="foot">
-        © {new Date().getFullYear()} Rubén Barona Alba · Frontend Engineer · Football Data Analyst
+        © {new Date().getFullYear()} Rubén Barona Alba · Software Engineer · Full Stack & AI Applications
       </footer>
       {open && (
         <MorphPanel rect={open.rect} closeLabel={t("Cerrar", "Close")}

@@ -24,8 +24,9 @@ export const metadata: Metadata = {
           title: 'Portfolio | Rubén Barona Alba',
           description:
             'Portfolio de proyectos: software, datos y machine learning aplicados al fútbol.',
+          images: [{ url: logo.src, width: 1024, height: 1024 }],
         },
-        twitter: { card: 'summary_large_image' },
+        twitter: { card: 'summary_large_image', images: [logo.src] },
       }
     : {
         // Sin SITE_URL: metas sin absolutas (válido en Vercel igualmente)
@@ -34,8 +35,9 @@ export const metadata: Metadata = {
           title: 'Portfolio | Rubén Barona Alba',
           description:
             'Portfolio de proyectos: software, datos y machine learning aplicados al fútbol.',
+          images: [{ url: logo.src, width: 1024, height: 1024 }],
         },
-        twitter: { card: 'summary_large_image' },
+        twitter: { card: 'summary_large_image', images: [logo.src] },
       }),
   icons: { icon: logo.src },
   robots: { index: true, follow: true }

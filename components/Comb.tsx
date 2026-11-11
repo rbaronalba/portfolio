@@ -43,7 +43,7 @@ export default function Comb({
   const [L, setL] = useState<Layout | null>(null);
   const els = useRef<(HTMLElement | null)[]>([]);
   const dimRef = useRef(dim);
-  dimRef.current = dim;
+  useEffect(() => { dimRef.current = dim; }, [dim]);
 
   useEffect(() => {
     const on = () => setL(buildLayout(innerWidth, innerHeight));

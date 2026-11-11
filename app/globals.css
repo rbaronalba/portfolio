@@ -142,6 +142,7 @@ a:hover{ color:var(--brand-2) }
   border:1px solid var(--border); background:var(--panel); color:var(--text);
 }
 .icon-btn:hover{ border-color:var(--border-hover) }
+.icon-btn svg{ width:18px; height:18px; }
 /* Icono de tema/idioma: vuelta completa al pasar el ratón */
 .spin{ display:inline-flex; transition:transform .6s var(--ease); }
 .icon-btn:hover .spin, .icon-btn:focus-visible .spin{ transform:rotate(360deg); }
@@ -216,6 +217,7 @@ a:hover{ color:var(--brand-2) }
 .pitem img{ width:100%; height:130px; object-fit:cover; border-radius:10px; border:1px solid var(--border); }
 .pitem h3{ font-family:var(--font-display), sans-serif; font-weight:600; margin:2px 0 6px; font-size:17px; }
 .pitem p{ margin:0 0 10px; font-size:14px; line-height:1.55; color:var(--muted); }
+.pitem.no-img{ grid-template-columns:1fr; }
 @media (max-width:680px){
   .pitem{ grid-template-columns:1fr }
   .pitem img{ height:150px }
@@ -223,6 +225,7 @@ a:hover{ color:var(--brand-2) }
 
 .cv-head{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; }
 .cv-page{ display:block; width:100%; margin-top:16px; border:1px solid var(--border); border-radius:var(--radius); background:#fff; }
+.cv-links{ display:flex; flex-wrap:wrap; gap:16px; margin-top:12px; }
 
 .chips{ display:flex; flex-wrap:wrap; gap:8px; }
 .chip{

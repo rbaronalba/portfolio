@@ -9,6 +9,8 @@ export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLang] = useState<Lang>("es");
 
   useEffect(() => {
+    // ponytail: leído tras montar a propósito, el servidor no tiene localStorage (evita mismatch de hidratación)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (localStorage.getItem(KEY) === "en") setLang("en");
   }, []);
 
